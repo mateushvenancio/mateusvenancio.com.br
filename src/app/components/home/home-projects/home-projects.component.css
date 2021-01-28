@@ -1,0 +1,28 @@
+.titulo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.projeto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icones {
+  color: black;
+  padding-right: 15px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.icones a {
+  color: black;
+}
+
+.projeto-titulo {
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
