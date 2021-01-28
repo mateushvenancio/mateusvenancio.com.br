@@ -1,3 +1,9 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header {
   height: 300px;
   display: flex;
@@ -30,16 +36,20 @@
 }
 
 .frase {
-  /* padding: 0 100px; */
+  margin-bottom: 80px;
   text-align: center;
   font-style: italic;
 }
 
 @media (max-width: 768px) {
-  .frase {
-    background-color: #00de7a;
-  }
   .header {
     flex-direction: column;
   }
+}
+
+.my-container {
+  width: min(95vw, 512px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
