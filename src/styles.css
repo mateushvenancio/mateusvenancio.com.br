@@ -4,3 +4,18 @@ body {
   font-family: "montserrat";
   background-color: #f7f9fa;
 }
+
+.main-color {
+  color: #00de7a;
+}
+
+a {
+  color: #00de7a;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #00de7a;
+  text-decoration: underline;
+}
