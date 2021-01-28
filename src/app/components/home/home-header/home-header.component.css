@@ -15,7 +15,7 @@
 }
 
 .nome {
-  font-size: 40px;
+  font-size: min(40px, 10vw);
   font-weight: bold;
 }
 
@@ -27,4 +27,19 @@
   padding-right: 20px;
   font-size: 25px;
   color: #00de7a;
+}
+
+.frase {
+  /* padding: 0 100px; */
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .frase {
+    background-color: #00de7a;
+  }
+  .header {
+    flex-direction: column;
+  }
 }
