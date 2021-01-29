@@ -1,20 +1,31 @@
 <div class="center">
     <div class="header">
-        <img src="https://www.jbox.com.br/wp/wp-content/uploads/2020/08/pok%C3%A9mon-koko-filme-destacada.jpg"
-            class="rounded-circle foto-perfil" alt="Eu">
+        <img src="{{ profileInfo.profilePicture }}" class="rounded-circle foto-perfil" alt="Eu">
         <div class="nome-e-redes">
             <div class="nome">Mateus Venâncio</div>
             <div class="redes">
-                <fa-icon [icon]="iconeGithub"></fa-icon>
-                <fa-icon [icon]="iconeLinkedin"></fa-icon>
-                <fa-icon [icon]="iconeMedium"></fa-icon>
+                <a href="https://github.com/mateushvenancio" target="_blank">
+                    <fa-icon [icon]="iconeGithub"></fa-icon>
+                </a> •
+                <a href="https://www.linkedin.com/in/mateushvenancio/" target="_blank">
+                    <fa-icon [icon]="iconeLinkedin"></fa-icon>
+                </a> •
+                <a href="https://www.instagram.com/mateushvenancio/" target="_blank">
+                    <fa-icon [icon]="iconeInstagram"></fa-icon>
+                </a> •
+                <a href="https://medium.com/@mateushvenancio" target="_blank">
+                    <fa-icon [icon]="iconeMedium"></fa-icon>
+                </a>
             </div>
         </div>
     </div>
 </div>
 <div class="my-container">
     <div class="frase">
+        {{ profileInfo.quote }}
+    </div>
+    <!-- <div class="frase">
         O universo é grande. É vasto, complicado e ridículo. E, às vezes, muito raramente, coisas impossíveis acontecem
         e nós as chamamos de milagres.
-    </div>
+    </div> -->
 </div>
