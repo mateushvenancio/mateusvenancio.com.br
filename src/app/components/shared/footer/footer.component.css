@@ -1,0 +1,11 @@
+.footer {
+  height: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icones {
+  font-size: 30px;
+}
