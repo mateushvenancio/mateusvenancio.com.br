@@ -10,23 +10,28 @@ import { HomeAboutComponent } from './components/home/home-about/home-about.comp
 import { HomeProjectsComponent } from './components/home/home-projects/home-projects.component';
 import { HomeBlogComponent } from './components/home/home-blog/home-blog.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { ConfigBarComponent } from './components/shared/config-bar/config-bar.component';
+import { ConfigService } from './services/config.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    HomeHeaderComponent,
-    HomeAboutComponent,
-    HomeProjectsComponent,
-    HomeBlogComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        HomeHeaderComponent,
+        HomeAboutComponent,
+        HomeProjectsComponent,
+        HomeBlogComponent,
+        FooterComponent,
+        ConfigBarComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule
+    ],
+    providers: [
+        ConfigService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

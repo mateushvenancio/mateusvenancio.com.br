@@ -1,0 +1,6 @@
+.icones {
+  position: fixed;
+  bottom: 50px;
+  right: min(50px, 5vw);
+  font-size: 30px;
+}

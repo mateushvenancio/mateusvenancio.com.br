@@ -4,3 +4,13 @@
   margin-right: auto;
   padding: 0 20px;
 }
+
+.dark-theme {
+  background-color: #414141;
+  color: #f7f9fa;
+}
+
+.light-theme {
+  background-color: #f7f9fa;
+  color: #414141;
+}
