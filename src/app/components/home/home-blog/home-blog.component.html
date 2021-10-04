@@ -1,31 +1,40 @@
-<div class="titulo">
-    Last Blog Posts <span class="ec ec-books"></span>
+<div class="titulo">Last Blog Posts <span class="ec ec-books"></span></div>
+<hr />
+<div *ngFor="let post of posts">
+  <div class="post">
+    <div class="post-titulo"><a href="#">{{ post.titulo }}</a></div>
+    <p>
+      <span class="data-hora">{{ post.data }}</span> Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Consequatur similique tempore placeat
+      incidunt eveniet a. Omnis velit ipsa amet. Minus expedita optio cumque?
+      Mollitia tempora, officiis consectetur dolorem maiores explicabo.
+    </p>
+  </div>
 </div>
-<hr>
+<!-- <div class="post">
+  <div class="post-titulo"><a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
+  <p>
+    <span class="data-hora">28/01/2021</span> Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Consequatur similique tempore placeat incidunt
+    eveniet a. Omnis velit ipsa amet. Minus expedita optio cumque? Mollitia
+    tempora, officiis consectetur dolorem maiores explicabo.
+  </p>
+</div>
 <div class="post">
-    <div class="post-titulo"> <a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
-    <p><span class="data-hora">28/01/2021</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Consequatur
-        similique tempore
-        placeat incidunt eveniet
-        a. Omnis velit ipsa amet. Minus expedita optio cumque? Mollitia tempora, officiis consectetur dolorem maiores
-        explicabo.</p>
+  <div class="post-titulo"><a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
+  <p>
+    <span class="data-hora">28/01/2021</span> Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Consequatur similique tempore placeat incidunt
+    eveniet a. Omnis velit ipsa amet. Minus expedita optio cumque? Mollitia
+    tempora, officiis consectetur dolorem maiores explicabo.
+  </p>
 </div>
 <div class="post">
-    <div class="post-titulo"> <a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
-    <p><span class="data-hora">28/01/2021</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Consequatur
-        similique tempore
-        placeat incidunt eveniet
-        a. Omnis velit ipsa amet. Minus expedita optio cumque? Mollitia tempora, officiis consectetur dolorem maiores
-        explicabo.</p>
-</div>
-<div class="post">
-    <div class="post-titulo"> <a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
-    <p><span class="data-hora">28/01/2021</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Consequatur
-        similique tempore
-        placeat incidunt eveniet
-        a. Omnis velit ipsa amet. Minus expedita optio cumque? Mollitia tempora, officiis consectetur dolorem maiores
-        explicabo.</p>
-</div>
+  <div class="post-titulo"><a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
+  <p>
+    <span class="data-hora">28/01/2021</span> Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Consequatur similique tempore placeat incidunt
+    eveniet a. Omnis velit ipsa amet. Minus expedita optio cumque? Mollitia
+    tempora, officiis consectetur dolorem maiores explicabo.
+  </p>
+</div> -->

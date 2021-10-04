@@ -12,6 +12,8 @@ import { HomeBlogComponent } from './components/home/home-blog/home-blog.compone
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { ConfigBarComponent } from './components/shared/config-bar/config-bar.component';
 import { ConfigService } from './services/config.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
     declarations: [
@@ -22,12 +24,14 @@ import { ConfigService } from './services/config.service';
         HomeProjectsComponent,
         HomeBlogComponent,
         FooterComponent,
-        ConfigBarComponent
+        ConfigBarComponent,
+        PostComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        HttpClientModule
     ],
     providers: [
         ConfigService
