@@ -3,18 +3,30 @@ import { Injectable } from '@angular/core';
 import { PostModel } from '../models/post.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostsService {
-  postsUrl = 'https://mateushvenancio.github.io/data/posts.json';
+  postsUrl =
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mateushvenancio';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getPosts() {
-    return this.http.get<PostModel[]>(this.postsUrl);
-  }
+  async getPosts() {
+    let posts: PostModel[] = [];
 
-  getPostById(id) {
-    return this.http.get(`https://mateushvenancio.github.io/data/posts_data/${id}/post.md`);
+    const _posts = await this.http.get(this.postsUrl).toPromise();
+
+    _posts['items'].forEach((element) => {
+      const _novo = new PostModel();
+
+      _novo.data = element['pubDate'];
+      _novo.titulo = element['title'];
+      _novo.descricao = element['description'];
+      _novo.categoria = element['categories'].map((e) => e.toString());
+
+      posts.push(_novo);
+    });
+
+    return posts;
   }
 }

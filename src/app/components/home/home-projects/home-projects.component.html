@@ -1,8 +1,19 @@
 <div class="titulo">
-    Projects & Stacks <span class="ec ec-computer"></span>
+    Projects <span class="ec ec-computer"></span>
 </div>
 <hr>
-<div class="projeto">
+<div *ngFor="let proj of projects" >
+    <div class="projeto-corpo">
+        <a href="{{proj.githubUrl }}">
+            <div class="projeto-titulo main-color">{{ proj.name }}</div>
+        </a>
+        <div class="tag-container">
+            <div class="tag" *ngFor="let tag of proj.languages">{{tag}}</div>
+        </div>
+        <p>{{ proj.summary }}</p>
+    </div>
+</div>
+<!-- <div class="projeto">
     <div class="icones">
         <a href="#">
             <fa-icon [icon]="iconeGithub"></fa-icon>
@@ -39,23 +50,4 @@
             nisi?
         </p>
     </div>
-</div>
-<div class="projeto">
-    <div class="icones">
-        <a href="#">
-            <fa-icon [icon]="iconeGithub"></fa-icon>
-        </a>
-    </div>
-    <div class="projeto-corpo">
-        <a href="#">
-            <div class="projeto-titulo main-color">Lorem Ipsum Dolor Sit Amet</div>
-        </a>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi expedita quidem quia ea molestiae, sint
-            ducimus
-            velit reprehenderit modi itaque dolorum, dolores explicabo beatae, aspernatur provident quisquam assumenda
-            numquam
-            nisi?
-        </p>
-    </div>
-</div>
+</div> -->

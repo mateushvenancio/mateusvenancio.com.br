@@ -26,3 +26,21 @@
   padding-bottom: 5px;
   font-size: 18px;
 }
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-container .tag {
+  margin: 5px 5px 0 0;
+}
+
+.tag {
+  font-size: 10px;
+  padding: 1px 8px;
+  border-radius: 45px;
+  border-color: #00de7a;
+  border-style: solid;
+  border-width: 1px;
+}

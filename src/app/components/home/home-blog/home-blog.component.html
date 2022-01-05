@@ -4,10 +4,9 @@
   <div class="post">
     <div class="post-titulo"><a href="#">{{ post.titulo }}</a></div>
     <p>
-      <span class="data-hora">{{ post.data }}</span> Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Consequatur similique tempore placeat
-      incidunt eveniet a. Omnis velit ipsa amet. Minus expedita optio cumque?
-      Mollitia tempora, officiis consectetur dolorem maiores explicabo.
+      <span class="data-hora">{{ post.data | date:'E, LLL dd - yyyy' }}</span>
+      {{ sanitizarTexto(post.descricao) }}
+      <!-- <span [innerHTML]="post.descricao | slice:0:200" ></span> -->
     </p>
   </div>
 </div>
