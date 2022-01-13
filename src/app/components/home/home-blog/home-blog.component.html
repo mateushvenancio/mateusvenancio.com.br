@@ -2,7 +2,7 @@
 <hr />
 <div *ngFor="let post of posts">
   <div class="post">
-    <div class="post-titulo"><a href="#">{{ post.titulo }}</a></div>
+    <div class="post-titulo"><a href="{{ post.link }}">{{ post.titulo }}</a></div>
     <p>
       <span class="data-hora">{{ post.data | date:'E, LLL dd - yyyy' }}</span>
       {{ sanitizarTexto(post.descricao) }}

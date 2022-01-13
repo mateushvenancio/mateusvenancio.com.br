@@ -19,6 +19,7 @@ export class PostsService {
     _posts['items'].forEach((element) => {
       const _novo = new PostModel();
 
+      _novo.link = element['guid'];
       _novo.data = element['pubDate'];
       _novo.titulo = element['title'];
       _novo.descricao = element['description'];
