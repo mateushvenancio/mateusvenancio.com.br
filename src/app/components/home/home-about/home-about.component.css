@@ -6,3 +6,31 @@
 .sem-borda {
   border: 0;
 }
+
+button {
+  width: 30%;
+  border: 2px solid #00de7a;
+  background-color: #00de7a;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.contatos {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contatos {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

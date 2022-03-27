@@ -5,16 +5,28 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-home-about',
   templateUrl: './home-about.component.html',
-  styleUrls: ['./home-about.component.css']
+  styleUrls: ['./home-about.component.css'],
 })
 export class HomeAboutComponent implements OnInit {
+  iconeWhatsapp = faWhatsapp;
+  iconeEmail = faEnvelope;
 
-  iconeWhatsapp = faWhatsapp
-  iconeEmail = faEnvelope
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  abrirZap() {
+    const link = 'https://api.whatsapp.com/send?phone=5565998009215';
+    window.open(link);
   }
 
+  abrirEmail() {
+    const link = 'mailto:contato@mateusvenancio.com.br';
+    window.open(link);
+  }
+
+  abrirCurriculo() {
+    const link = 'https://gitconnected.com/mateushvenancio/resume';
+    window.open(link);
+  }
 }
