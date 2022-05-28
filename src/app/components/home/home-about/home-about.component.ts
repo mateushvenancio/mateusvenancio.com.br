@@ -16,7 +16,7 @@ export class HomeAboutComponent implements OnInit {
   ngOnInit(): void {}
 
   abrirZap() {
-    const link = 'https://api.whatsapp.com/send?phone=5565998009215';
+    const link = 'https://api.whatsapp.com/send?phone=5538998837290';
     window.open(link);
   }
 
