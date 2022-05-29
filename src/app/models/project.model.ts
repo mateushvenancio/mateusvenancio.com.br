@@ -1,10 +1,9 @@
+import { LinkModel } from './link.model';
+
 export class ProjectModel {
-    constructor() {}
-  
-    name: string;
-    displayName: string;
-    summary: string;
-    languages: string[];
-    libraries: string[];
-    githubUrl: string;
+  title: string;
+  link: string;
+  descricao: string;
+  tags: string[];
+  links: LinkModel[];
 }

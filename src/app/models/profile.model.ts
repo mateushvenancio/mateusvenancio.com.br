@@ -1,4 +1,11 @@
+import { PostModel } from './post.model';
+import { ProjectModel } from './project.model';
+
 export class ProfileModel {
-    name: string;
-    summary: string;
+  nome: string;
+  image: string;
+  frase: string;
+  about_me: string;
+  projects: ProjectModel[];
+  blog_posts: PostModel[];
 }

@@ -1,9 +1,7 @@
 export class PostModel {
-  constructor() {}
-
+  title: string;
+  date: string;
+  description: string;
   link: string;
-  data: string;
-  titulo: string;
-  descricao: string;
-  categoria: string[];
+  tags: string[];
 }
