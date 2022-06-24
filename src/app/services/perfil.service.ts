@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { ProfileModel } from '../models/profile.model';
 import { ProjectModel } from '../models/project.model';
 import { SkillModel } from '../models/skill.model';
@@ -13,18 +13,11 @@ export class PerfilService {
   url =
     'https://raw.githubusercontent.com/mateushvenancio/projetos-md/main/api_site.json';
 
-  perfil: ProfileModel;
-  projects: Subject<ProjectModel[]> = new Subject<ProjectModel[]>();
-  skills: Subject<SkillModel[]> = new Subject<SkillModel[]>();
-
   constructor(private http: HttpClient) {
     this.getPerfil();
   }
 
-  getPerfil() {
-    this.http.get(this.url).subscribe((result) => {
-      this.projects.next(result['projects']);
-      this.skills.next(result['skills']);
-    });
+  getPerfil(): Observable<ProfileModel> {
+    return this.http.get<ProfileModel>(this.url);
   }
 }

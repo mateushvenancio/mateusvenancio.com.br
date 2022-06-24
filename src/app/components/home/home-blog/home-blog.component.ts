@@ -1,6 +1,7 @@
 import { Component, OnInit, SecurityContext } from '@angular/core';
-import { PostsService } from 'src/app/services/posts.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { PostModel } from 'src/app/models/post.model';
+import { PerfilService } from 'src/app/services/perfil.service';
 
 @Component({
   selector: 'app-home-blog',
@@ -8,13 +9,14 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrls: ['./home-blog.component.css'],
 })
 export class HomeBlogComponent implements OnInit {
-  posts: any;
+  posts: PostModel[];
 
-  constructor(private postsService: PostsService) {}
+  constructor(private perfilService: PerfilService) {}
 
   ngOnInit(): void {
-    this.postsService.getPosts().then((result) => {
-      this.posts = result;
+    this.perfilService.getPerfil().subscribe((result) => {
+      this.posts = result.blog_posts;
+      console.log('Posts: ', result.blog_posts);
     });
   }
 

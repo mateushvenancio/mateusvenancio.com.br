@@ -1,17 +1,15 @@
-<div class="titulo">
-    Projects <span class="ec ec-computer"></span>
-</div>
-<hr>
-<div *ngFor="let proj of projects" >
-    <div class="projeto-corpo">
-        <a href="{{proj.githubUrl }}">
-            <div class="projeto-titulo main-color">{{ proj.name }}</div>
-        </a>
-        <div class="tag-container">
-            <div class="tag" *ngFor="let tag of proj.languages">{{tag}}</div>
-        </div>
-        <p>{{ proj.summary }}</p>
+<div class="titulo">Projects <span class="ec ec-computer"></span></div>
+<hr />
+<div *ngFor="let proj of projects">
+  <div class="projeto-corpo">
+    <a href="{{ proj.link }}">
+      <div class="projeto-titulo main-color">{{ proj.title }}</div>
+    </a>
+    <div class="tag-container">
+      <div class="tag" *ngFor="let tag of proj.tags">{{ tag }}</div>
     </div>
+    <p>{{ proj.descricao }}</p>
+  </div>
 </div>
 <!-- <div class="projeto">
     <div class="icones">

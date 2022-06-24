@@ -6,20 +6,20 @@ import { ProjectModel } from 'src/app/models/project.model';
 import { PerfilService } from 'src/app/services/perfil.service';
 
 @Component({
-    selector: 'app-home-projects',
-    templateUrl: './home-projects.component.html',
-    styleUrls: ['./home-projects.component.css']
+  selector: 'app-home-projects',
+  templateUrl: './home-projects.component.html',
+  styleUrls: ['./home-projects.component.css'],
 })
 export class HomeProjectsComponent implements OnInit {
-    iconeGithub = faGithub
+  iconeGithub = faGithub;
 
-    projects: ProjectModel[] = [];
-    
-    constructor(private perfilService: PerfilService) { }
+  projects: ProjectModel[] = [];
 
-    ngOnInit(): void {
-        this.perfilService.projects.subscribe(result => {
-            this.projects = result;
-        });
-    }
+  constructor(private perfilService: PerfilService) {}
+
+  ngOnInit(): void {
+    this.perfilService.getPerfil().subscribe((result) => {
+      this.projects = result.projects;
+    });
+  }
 }
